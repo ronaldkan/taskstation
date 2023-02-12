@@ -1,0 +1,16 @@
+domain: taskstation.io
+layout:
+- go.kubebuilder.io/v3
+projectName: taskstation
+repo: taskstation.io/taskstation
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: taskstation.io
+  group: dispatcher
+  kind: Task
+  path: taskstation.io/taskstation/api/v1alpha1
+  version: v1alpha1
+version: "3"

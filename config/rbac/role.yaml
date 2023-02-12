@@ -1,0 +1,33 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - dispatcher.taskstation.io
+  resources:
+  - tasks
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - dispatcher.taskstation.io
+  resources:
+  - tasks/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - dispatcher.taskstation.io
+  resources:
+  - tasks/status
+  verbs:
+  - get
+  - patch
+  - update
